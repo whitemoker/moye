@@ -1,0 +1,15 @@
+node_modules/
+dist/
+test-results/
+package-stage/
+release/
+*.log
+verification.json
+THIRD-PARTY-NOTICES.txt
+README.local.md
+README.publish-draft.md
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
