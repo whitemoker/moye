@@ -10,6 +10,8 @@
 2. 右键压缩包，选择“全部解压”。
 3. 打开解压后的文件夹，双击 `Moye.exe`。
 
+![墨页 0.1.4 实际界面：大纲、Markdown 编辑与任务清单](docs/images/moye-preview.png)
+
 这是 Windows x64 便携版，无需安装，也无需安装 Node.js。请保留整个解压文件夹，不要只复制其中的 EXE。GitHub 自动生成的 `Source code (zip)` / `Source code (tar.gz)` 是源码，需要自行构建。
 
 分享给朋友时，可以直接发送 [项目首页](https://github.com/whitemoker/moye) 或 [下载页面](https://github.com/whitemoker/moye/releases)。写作和保存本地文件无需联网；文稿里的网络图片与外部链接仍需要网络。
