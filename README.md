@@ -49,22 +49,6 @@
 
 注册使用当前 Windows 用户的设置，不会强制更改默认应用。若希望双击文件就用墨页打开，请在 Windows 的“打开方式”中自行设为默认。移动软件文件夹后，可重新注册。
 
-## 常用快捷键
-
-- 新建 / 打开 / 保存：`Ctrl+N` / `Ctrl+O` / `Ctrl+S`
-- 打开文件夹：`Ctrl+Shift+O`
-- 另存为：`Ctrl+Shift+S`
-- 即时编辑 / 源代码：`Ctrl+/`
-- 查找 / 替换：`Ctrl+F` / `Ctrl+H`
-- 快速打开：`Ctrl+P`
-- 加粗 / 斜体：`Ctrl+B` / `Ctrl+I`
-- 一级至六级标题 / 正文：`Ctrl+1` 至 `Ctrl+6` / `Ctrl+0`
-- 插入链接：`Ctrl+K`
-- 显示或隐藏侧边栏：`Ctrl+Shift+B`
-- 写作设置：`Ctrl+,`
-- 专注 / 打字机模式：`F8` / `F9`
-- 全屏：`F11`
-
 ## 文件与兼容性
 
 - 当前版本提供 Windows x64 构建，其他平台尚未验证。
@@ -106,14 +90,8 @@ npm run package
 
 主要技术：Electron、React、TypeScript、Vite、Milkdown / Crepe 和 CodeMirror。
 
-## 反馈问题
-
-请到 [Issues](https://github.com/whitemoker/moye/issues) 提交问题，尽量说明软件版本、Windows 版本、复现步骤和预期结果。涉及公司或个人隐私的文稿，请先脱敏。
-
 ## 许可证
 
 本项目采用 **Apache License 2.0 + Commons Clause 1.0**，两部分同时适用，完整条款见 [LICENSE](LICENSE)。允许个人及公司内部免费办公使用；销售限制以 LICENSE 中的 Commons Clause 定义为准。
 
 这不是仅使用 Apache-2.0 的项目，也不属于 OSI 定义的开源许可证。第三方依赖仍遵循各自的许可证，发行包内包含第三方许可说明。
-
-墨页是独立项目，与 Typora、Obsidian 无关联。
