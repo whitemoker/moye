@@ -8,6 +8,7 @@ verification.json
 THIRD-PARTY-NOTICES.txt
 README.local.md
 README.publish-draft.md
+README.usage-draft.md
 .env
 .env.*
 !.env.example
