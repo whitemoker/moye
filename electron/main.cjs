@@ -4,6 +4,7 @@ const fs = require('node:fs/promises');
 const { watch } = require('node:fs');
 const { pathToFileURL } = require('node:url');
 const { hash, readDocument, saveDocument, atomicWrite, isInside, listMarkdown, copyRelativeImages } = require('./storage.cjs');
+const { readComments, readCommentFile, saveBundle, recoverBundle, sidecarPath, journalPath } = require('./comments.cjs');
 const { suggestedSavePath } = require('./save-name.cjs');
 const { registerWindowsIntegration } = require('./windows-integration.cjs');
 
@@ -22,19 +23,24 @@ const remember = async p => { prefs.recent = [p, ...(prefs.recent || []).filter(
 async function openDocument(p) {
   const doc = await readDocument(p);
   grants.add(path.resolve(p)); roots.add(path.dirname(path.resolve(p)));
-  await remember(p); monitor(p); return doc;
+  let recoveryWarning;
+  try { await recoverBundle(p, app.getPath('userData')); } catch (error) { recoveryWarning = error.message; }
+  const comments = await readComments(p);
+  const commentDraft = await readJSON(inputName(p), undefined);
+  await remember(p); monitor(p); return { ...doc, ...comments, ...(recoveryWarning ? { commentsError: recoveryWarning } : {}), commentDraft };
 }
 function monitor(p) {
   watcher?.close(); watchedFile = p;
   let timer;
   try { watcher = watch(path.dirname(p), (_, filename) => {
-    if (filename && filename.toString() !== path.basename(p)) return;
+    if (filename && ![path.basename(p), path.basename(sidecarPath(p))].includes(filename.toString())) return;
     clearTimeout(timer); timer = setTimeout(async () => {
-      try { send('externalChange', { path: p, hash: hash(await fs.readFile(p)) }); }
+      try { const comments = await readComments(p); send('externalChange', { path: p, hash: hash(await fs.readFile(p)), commentsHash: comments.commentsError ? 'invalid' : comments.commentsHash }); }
       catch (e) { if (e.code === 'ENOENT') send('externalChange', { path: p, hash: null }); }
     }, 250);
   }); watcher.on('error', () => {}); } catch { /* Save still checks the file hash. */ }
 }
+const inputName = p => `comment-input-${hash(p || 'untitled')}.json`;
 async function readJSON(name, fallback) { try { return JSON.parse(await fs.readFile(dataPath(name), 'utf8')); } catch { return fallback; } }
 function handle(name, fn) { ipcMain.handle(`moye:${name}`, async (event, ...args) => {
   if (event.sender !== win?.webContents || event.senderFrame !== win.webContents.mainFrame) throw new Error('Unknown sender');
@@ -76,7 +82,8 @@ handle('save', request => serialized(async () => {
     assertPath(request.path);
     await copyRelativeImages(request.path, target, request.imageSources);
   }
-  const result = await saveDocument(target, request.content, expectedHash, { eol: request.eol, bom: request.bom, force: !!request.force });
+  const newDocument = target !== request.path;
+  const result = await saveBundle({ ...request, path: target, hash: expectedHash, commentsHash: newDocument ? null : request.commentsHash, newDocument }, app.getPath('userData'));
   if (!result.conflict) { prefs.lastSaveDirectory = path.dirname(target); await remember(target); if (watchedFile !== target) monitor(target); }
   return result;
 }));
@@ -85,9 +92,22 @@ handle('draft', draft => serialized(async () => {
   await atomicWrite(dataPath('draft.json'), JSON.stringify({ ...draft, updatedAt: Date.now() }));
   return true;
 }));
+handle('commentDraft', request => serialized(async () => {
+  if (request.path) assertPath(request.path);
+  const value = JSON.stringify(request.draft);
+  if (value.length > 1024 * 1024) throw new Error('评论草稿超过 1 MB');
+  await atomicWrite(dataPath(inputName(request.path)), value);
+}));
+handle('discardRecovery', p => serialized(() => fs.rm(journalPath(app.getPath('userData'), assertPath(p)), { force: true })));
+handle('importComments', async documentPath => {
+  assertPath(documentPath);
+  const result = await dialog.showOpenDialog(win, { title: '导入评论配套文件', filters: [{ name: '墨页评论', extensions: ['json'] }], properties: ['openFile'] });
+  if (result.canceled) return null;
+  return (await readCommentFile(result.filePaths[0])).comments;
+});
 handle('clearDraft', () => serialized(() => fs.rm(dataPath('draft.json'), { force: true })));
 handle('settings', delta => serialized(async () => {
-  for (const key of ['theme', 'fontSize', 'width', 'autoSave', 'sidebar', 'focus', 'typewriter', 'serif']) if (key in delta) prefs[key] = delta[key];
+  for (const key of ['theme', 'fontSize', 'width', 'autoSave', 'sidebar', 'focus', 'typewriter', 'serif', 'commentsOpen', 'commentsWidth', 'commentAuthor', 'commentAuthorId']) if (key in delta) prefs[key] = delta[key];
   await atomicWrite(dataPath('settings.json'), JSON.stringify(prefs)); return prefs;
 }));
 handle('windowsIntegration', () => serialized(async () => {

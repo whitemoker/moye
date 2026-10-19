@@ -1,0 +1,36 @@
+/* Fenced code uses the app palette, including unclassified/plain text. */
+.app {
+  --code-keyword: #4e206f;
+  --code-name: #70252d;
+  --code-function: #0e405c;
+  --code-constant: #59370e;
+  --code-number: #573b0b;
+  --code-operator: #124346;
+  --code-comment: #374043;
+  --code-string: #1f4421;
+  --code-active: #e9eef0;
+  --code-selection: #b9d3cc80;
+}
+.theme-paper {
+  --code-active: #ebe3d3;
+  --code-selection: #cfb98b70;
+}
+.theme-dark {
+  --code-keyword: #dbabed;
+  --code-name: #f3aab2;
+  --code-function: #8fc8f3;
+  --code-constant: #e5b98a;
+  --code-number: #e9cd94;
+  --code-operator: #8bced4;
+  --code-comment: #b6c1cf;
+  --code-string: #b1d39b;
+  --code-active: #30383f;
+  --code-selection: #4a655d50;
+}
+.app .milkdown .milkdown-code-block-placeholder code {
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+}

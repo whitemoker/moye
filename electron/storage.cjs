@@ -14,13 +14,22 @@ async function readDocument(filePath) {
   return { path: filePath, content, hash: hash(bytes), bom: bytes.subarray(0, 3).equals(Buffer.from([239, 187, 191])), eol: content.includes('\r\n') ? '\r\n' : '\n' };
 }
 
-async function atomicWrite(filePath, bytes) {
+async function atomicWrite(filePath, bytes, options = {}) {
   await fs.mkdir(path.dirname(filePath), { recursive: true });
   const temp = path.join(path.dirname(filePath), `.${path.basename(filePath)}.${crypto.randomUUID()}.tmp`);
   try {
     const handle = await fs.open(temp, 'wx');
     try { await handle.writeFile(bytes); await handle.sync(); } finally { await handle.close(); }
-    await fs.rename(temp, filePath);
+    // OneDrive / virus scanners can briefly hold the destination. Never unlink
+    // the original: a failed replacement must leave its bytes recoverable.
+    for (let attempt = 0; ; attempt++) {
+      await options.beforeReplace?.();
+      try { await fs.rename(temp, filePath); break; }
+      catch (error) {
+        if (!['EPERM', 'EACCES', 'EBUSY'].includes(error.code) || attempt >= 5) throw error;
+        await new Promise(resolve => setTimeout(resolve, 40 * 2 ** attempt));
+      }
+    }
   } finally { await fs.rm(temp, { force: true }).catch(() => {}); }
 }
 

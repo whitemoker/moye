@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-19",
+  "version": "0.2.0-rc.2",
+  "asarSha256": "dc35bc916b585685e0f4480f8edb120d64dcdb0e979268446b5cd33e80e887f8",
+  "sourceSha256": {
+    "src/formatCommands.ts": "f1d33335ce87cb6d5a75ad316463533f1ed0af01baa6e983eba2855f7ddb86f8",
+    "src/sourceFormatting.ts": "853cc0d7b246146737f69dac0b30f4a6400b4dd6ab00225568bd02ee4a12affb",
+    "src/Editor.tsx": "ebd221f3474c0059a71a67e2b696127a7744e8efe167146775c0b70c3a56bd5c",
+    "src/App.tsx": "51393a10cc9d154cf996002d5e6769615d5c16fe919348a2507c50d1df95b693",
+    "package.json": "27cdd8f6d61cd53d953d7f9447dacfcaff3ef378438837621957d77dea280773",
+    "package-lock.json": "3a65e424ccf54475133d3b685f01bef2185eb90c05d85d4ee6abc3ec81642ce9"
+  },
+  "unit": {
+    "passed": 39,
+    "failed": 0,
+    "command": "npm.cmd test"
+  },
+  "build": {
+    "passed": true,
+    "warning": "Existing large chunk warning"
+  },
+  "electron": {
+    "formats": [
+      "实际 Ctrl+1–6 同级取消、跨级切换、菜单 H5/H6 与撤销",
+      "列表菜单转换、同类取消和任务清单保留原文",
+      "引用取消保留加粗，标题/引用/列表操作后的评论仍定位原文",
+      "查找、快速打开、评论输入和中文组合输入不改变正文；长按不反复切换",
+      "代码编辑区域中标题快捷键与菜单不改代码",
+      "源码 H5/H6、加粗重复取消和撤销；选中多行列表逐行处理"
+    ],
+    "contextMenu": [
+      "鼠标拖选后不出现格式工具栏",
+      "右键打开格式菜单且保留原选区",
+      "右键加粗只影响原选中的文字，并显示启用状态",
+      "插入链接沿用所选文字，取消后不改文稿",
+      "右键斜体、删除线、代码与公式作用于所选文字",
+      "表格右键同时保留格式和增删行列操作",
+      "源码选区右键加粗插入 Markdown 标记",
+      "右键菜单在深色主题可见，点击正文可关闭"
+    ],
+    "comments": [
+      "范围评论发布与独立保存，原文 BOM/CRLF 字节不变",
+      "评论输入快捷键不改变正文，回复与解决/重开保存",
+      "修改与删除评论可撤销，发布组合输入不误触",
+      "前方输入跟随，整段删除失联，撤销恢复；自动保存关闭时不偷存正文",
+      "高亮点开，收起保留草稿，重启恢复未发送输入",
+      "源码模式全文评论与模式往返、另存为复制和取消",
+      "实际 IPC 部分保存失败可重试，保存时继续编辑保留新快照",
+      "评论外部变化与损坏不静默覆盖，明确载入磁盘版本",
+      "三种主题、300–440 宽度及最小窗口抽屉"
+    ],
+    "errors": []
+  },
+  "productAcceptance": "pending",
+  "implementationCommit": null
+}

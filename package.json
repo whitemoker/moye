@@ -1,6 +1,6 @@
 {
   "name": "moye",
-  "version": "0.1.4",
+  "version": "0.2.0-rc.3",
   "description": "墨页 · 专注本地写作的 Markdown 编辑器",
   "license": "SEE LICENSE IN LICENSE",
   "author": "whitemoker",
@@ -15,9 +15,13 @@
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
     "start": "electron .",
-    "test": "node --test tests/storage.test.cjs tests/save-name.test.cjs",
+    "test": "node --test tests/storage.test.cjs tests/save-name.test.cjs tests/comments.test.cjs tests/comment-anchors.test.mjs tests/format-toggle.test.mjs",
     "test:e2e": "node tests/e2e.mjs",
-    "package": "npm run build && node scripts/package.mjs"
+    "test:contrast": "node tests/code-block-contrast.mjs",
+    "package": "npm run build && node scripts/package.mjs",
+    "test:comments": "node tests/comments-e2e.mjs",
+    "test:format": "node tests/format-toggle-e2e.mjs",
+    "test:typography": "node tests/editor-typography-e2e.mjs"
   },
   "devDependencies": {
     "@codemirror/commands": "^6.11.1",

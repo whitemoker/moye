@@ -1,0 +1,352 @@
+{
+  "date": "2026-10-17",
+  "candidateVersion": "0.1.5-rc.1",
+  "productAcceptance": {
+    "status": "accepted",
+    "date": "2026-10-17",
+    "timezone": "Asia/Shanghai",
+    "feedback": "刚好，没问题",
+    "releaseVersion": "0.1.5"
+  },
+  "baselineCommit": "01c54cc",
+  "implementationCommit": null,
+  "packagedAppAsarSha256": "d1e14db5b935b801c6ad5a7b277ad21368d3239f48299a5a480068e770d8af08",
+  "checks": {
+    "unitTests": 15,
+    "contrastStates": 24,
+    "pageErrors": [],
+    "build": "passed",
+    "package": "passed"
+  },
+  "before": [
+    {
+      "name": "paper/normal/plain",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 1,
+      "minContrast": 1.7948465044993405
+    },
+    {
+      "name": "paper/normal/python",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 1,
+      "minContrast": 1.5063584827465404
+    },
+    {
+      "name": "paper/normal/javascript",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 1,
+      "minContrast": 1.5063584827465404
+    },
+    {
+      "name": "paper/focused/plain",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 1,
+      "minContrast": 1.7948465044993405
+    },
+    {
+      "name": "paper/inactive/plain",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 0.8,
+      "minContrast": 1.5740420492925478
+    },
+    {
+      "name": "paper/inactive/python",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 0.8,
+      "minContrast": 1.3821245859714348
+    },
+    {
+      "name": "paper/inactive/javascript",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 0.8,
+      "minContrast": 1.3821245859714348
+    },
+    {
+      "name": "light/normal/plain",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 1,
+      "minContrast": 1.9156141643121964
+    },
+    {
+      "name": "light/normal/python",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 1,
+      "minContrast": 1.610395476652567
+    },
+    {
+      "name": "light/normal/javascript",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 1,
+      "minContrast": 1.610395476652567
+    },
+    {
+      "name": "light/focused/plain",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 1,
+      "minContrast": 1.9156141643121964
+    },
+    {
+      "name": "light/inactive/plain",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 0.8,
+      "minContrast": 1.653157485789336
+    },
+    {
+      "name": "light/inactive/python",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 0.8,
+      "minContrast": 1.4562632576502619
+    },
+    {
+      "name": "light/inactive/javascript",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 0.8,
+      "minContrast": 1.4562632576502619
+    },
+    {
+      "name": "dark/normal/plain",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 1,
+      "minContrast": 6.1110595290626435
+    },
+    {
+      "name": "dark/normal/python",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 1,
+      "minContrast": 3.5961275927449465
+    },
+    {
+      "name": "dark/normal/javascript",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 1,
+      "minContrast": 3.5961275927449465
+    },
+    {
+      "name": "dark/focused/plain",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 1,
+      "minContrast": 6.1110595290626435
+    },
+    {
+      "name": "dark/inactive/plain",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 0.8,
+      "minContrast": 4.525029587846985
+    },
+    {
+      "name": "dark/inactive/python",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 0.8,
+      "minContrast": 2.8388616238345468
+    },
+    {
+      "name": "dark/inactive/javascript",
+      "color": "rgb(171, 178, 191)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 0.8,
+      "minContrast": 2.8388616238345468
+    }
+  ],
+  "after": [
+    {
+      "name": "paper/normal/plain",
+      "color": "rgb(70, 63, 53)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 1,
+      "minContrast": 8.13746258566112
+    },
+    {
+      "name": "paper/normal/python",
+      "color": "rgb(70, 63, 53)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 1,
+      "minContrast": 8.32671849170001
+    },
+    {
+      "name": "paper/normal/javascript",
+      "color": "rgb(70, 63, 53)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 1,
+      "minContrast": 8.32671849170001
+    },
+    {
+      "name": "paper/focused/plain",
+      "color": "rgb(70, 63, 53)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 1,
+      "minContrast": 8.13746258566112
+    },
+    {
+      "name": "paper/inactive/plain",
+      "color": "rgb(70, 63, 53)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 0.8,
+      "minContrast": 4.764931303666002
+    },
+    {
+      "name": "paper/inactive/python",
+      "color": "rgb(70, 63, 53)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 0.8,
+      "minContrast": 4.853747934097324
+    },
+    {
+      "name": "paper/inactive/javascript",
+      "color": "rgb(70, 63, 53)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 0.8,
+      "minContrast": 4.853747934097324
+    },
+    {
+      "name": "light/normal/plain",
+      "color": "rgb(48, 53, 58)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 1,
+      "minContrast": 10.585284227293018
+    },
+    {
+      "name": "light/normal/python",
+      "color": "rgb(48, 53, 58)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 1,
+      "minContrast": 9.081503420360516
+    },
+    {
+      "name": "light/normal/javascript",
+      "color": "rgb(48, 53, 58)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 1,
+      "minContrast": 9.081503420360516
+    },
+    {
+      "name": "light/focused/plain",
+      "color": "rgb(48, 53, 58)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 1,
+      "minContrast": 10.585284227293018
+    },
+    {
+      "name": "light/inactive/plain",
+      "color": "rgb(48, 53, 58)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 0.8,
+      "minContrast": 5.8248077836680805
+    },
+    {
+      "name": "light/inactive/python",
+      "color": "rgb(48, 53, 58)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 0.8,
+      "minContrast": 5.153370223296087
+    },
+    {
+      "name": "light/inactive/javascript",
+      "color": "rgb(48, 53, 58)",
+      "background": "rgb(246, 247, 248)",
+      "opacity": 0.8,
+      "minContrast": 5.153370223296087
+    },
+    {
+      "name": "dark/normal/plain",
+      "color": "rgb(217, 223, 226)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 1,
+      "minContrast": 8.849992727712397
+    },
+    {
+      "name": "dark/normal/python",
+      "color": "rgb(217, 223, 226)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 1,
+      "minContrast": 6.532733312398535
+    },
+    {
+      "name": "dark/normal/javascript",
+      "color": "rgb(217, 223, 226)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 1,
+      "minContrast": 6.532733312398535
+    },
+    {
+      "name": "dark/focused/plain",
+      "color": "rgb(217, 223, 226)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 1,
+      "minContrast": 8.849992727712397
+    },
+    {
+      "name": "dark/inactive/plain",
+      "color": "rgb(217, 223, 226)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 0.8,
+      "minContrast": 6.404471603961087
+    },
+    {
+      "name": "dark/inactive/python",
+      "color": "rgb(217, 223, 226)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 0.8,
+      "minContrast": 4.85571651914123
+    },
+    {
+      "name": "dark/inactive/javascript",
+      "color": "rgb(217, 223, 226)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 0.8,
+      "minContrast": 4.85571651914123
+    },
+    {
+      "name": "paper/roundtrip/plain",
+      "color": "rgb(70, 63, 53)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 1,
+      "minContrast": 8.13746258566112
+    },
+    {
+      "name": "dark/lazy/plain",
+      "color": "rgb(217, 223, 226)",
+      "background": "rgb(39, 45, 51)",
+      "opacity": 1,
+      "minContrast": 8.849992727712397
+    },
+    {
+      "name": "paper/new-fence/plain",
+      "color": "rgb(70, 63, 53)",
+      "background": "rgb(244, 239, 228)",
+      "opacity": 1,
+      "minContrast": 8.13746258566112
+    }
+  ],
+  "sourceSha256": {
+    "package.json": "375387ff67f5ddf81f455089e4b4543ad40c19c3bcb03f1b21745e6fbe165ef7",
+    "package-lock.json": "bc2a687ea9f563d625c242a82c8b7859e52adfc09ecc4a705d833a5ad7c81aaf",
+    "src/Editor.tsx": "d108856280e7f550e11a8ec5a46977aa428096b87e99c2ee12a4be909a10aa14",
+    "src/codeBlockTheme.ts": "4cf39a44fe7c30e3d79b4fa1d2971747f4011e73ba03a9cb3a22ceca98711311",
+    "src/code-block.css": "3be341eee7b110eb75dcff157d395b923a0de0929b71a4d0dfb9de299e69fdd9",
+    "src/style.css": "9070c92c1148b004db7cda316853ef85b62b68538e24b38af859f202aa31bba3",
+    "src/App.tsx": "c1d0a53e4c57516aa9de3b3e195592e58baccfdb3d5f8522a0f885cfa20109d9",
+    "src/version.d.ts": "7aac79a6648daf6a09ff59d17d5e70c969314a7ba1b84bc500660958a29bd83a",
+    "vite.config.ts": "905da685461d41ef76adcbf421d1da002e25adfaa72d88e224d1cfca22a59e4f",
+    "tests/code-block-contrast.mjs": "450e78deedb21b41a976d244457ded72113dbdb7abb928dcaf5686de5314556f"
+  }
+}

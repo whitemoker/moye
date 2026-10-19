@@ -1,0 +1,252 @@
+{
+  "date": "2026-10-17",
+  "timezone": "Asia/Shanghai",
+  "targetVersion": "0.2.0",
+  "candidateVersion": "0.2.0-rc.1",
+  "productAcceptance": "pending",
+  "finalVersion": null,
+  "baselineCommit": "01c54cc",
+  "implementationCommit": null,
+  "appAsarSHA256": "2dcf645dc7fb2a22d5e532cb35d2355c363d9f6a59a6f415ef8d10496054106a",
+  "sourceHashes": {
+    "src/App.tsx": "1aee1620a39f3501f843e5baf0a808bd849418910e18de3046bbdcd9d1604a55",
+    "src/Editor.tsx": "5206843104ba23edf392af0acbec216a52bc926000b5168b8dc6209b42b2fc54",
+    "src/types.ts": "438ee781aaaa9c4a998b3aad92739d5694ab19cf3b485569cba7637736a9382b",
+    "src/comments.css": "5783af03f34b5001e26e5a44ccccc1766894365faecb0a2b8d19452913675b45",
+    "src/comments/types.ts": "5ca8b19176dbe0ddf32ed3f1f3e48e6bc62e1a65157b9b800b8fb8e5ebfe2ab2",
+    "src/comments/anchors.ts": "1826ccb9ee6870b54294a1ab0bd418d9fcf408dd8767e44d5eb6cbe4bd41677c",
+    "src/comments/plugin.ts": "baf9d68fc2fefbf21b478546640f2f5e1e3fa869259663139eab6bbceb30e21b",
+    "src/components/comments/CommentSidebar.tsx": "af8fa78922539899585181d4eb1d62bf24981aaa7703c491f5ab5c48cfba45cc",
+    "electron/main.cjs": "473c984bfdb7d93209a56082b1d4409b3930a500370c4dcee617bba379d70982",
+    "electron/preload.cjs": "bbd98751722106fd580aa16c0ae68ed95edebdddc993ab89b6c5b94e8d8dec76",
+    "electron/storage.cjs": "e3adc63e9d28af7a5c2b95d2d83cc62c94e3a643361fb6f075cabe4aabf4e4f6",
+    "electron/comments.cjs": "78d68226a6fe24a81cbdd39e72c3ae2ad0975e1d6fcb4be7eaa1c46b5eedf13b",
+    "package.json": "f2ab14f8c7c3b4b1ac1a6703e462fb9515d8892bedd831609fdf584c9f1bfa57"
+  },
+  "checks": {
+    "unitTests": 28,
+    "productionBuild": "passed",
+    "packagedComments": [
+      "范围评论发布与独立保存，原文 BOM/CRLF 字节不变",
+      "评论输入快捷键不改变正文，回复与解决/重开保存",
+      "修改与删除评论可撤销，发布组合输入不误触",
+      "前方输入跟随，整段删除失联，撤销恢复；自动保存关闭时不偷存正文",
+      "高亮点开，收起保留草稿，重启恢复未发送输入",
+      "源码模式全文评论与模式往返、另存为复制和取消",
+      "实际 IPC 部分保存失败可重试，保存时继续编辑保留新快照",
+      "评论外部变化与损坏不静默覆盖，明确载入磁盘版本",
+      "三种主题、300–440 宽度及最小窗口抽屉"
+    ],
+    "runtimeErrors": [],
+    "regression": {
+      "documentE2E": 12,
+      "writingModes": 12,
+      "contextMenu": "passed",
+      "codeContrastStates": 24
+    },
+    "regressionNote": "常规文稿/写作模式/代码块回归通过后，最终仅调整评论删除时的输入草稿保留；最终打包版重新运行单元测试与全部评论 Electron 场景。"
+  },
+  "colors": [
+    {
+      "theme": "paper",
+      "samples": [
+        {
+          "selector": ".comment-body",
+          "foreground": "rgb(70, 63, 53)",
+          "background": [
+            252,
+            248,
+            238
+          ],
+          "contrast": 9.788596564833298
+        },
+        {
+          "selector": ".comment-quote",
+          "foreground": "rgb(112, 98, 78)",
+          "background": [
+            252,
+            248,
+            238
+          ],
+          "contrast": 5.583889389541681
+        },
+        {
+          "selector": ".comment-byline time",
+          "foreground": "rgb(112, 98, 78)",
+          "background": [
+            252,
+            248,
+            238
+          ],
+          "contrast": 5.583889389541681
+        },
+        {
+          "selector": ".comment-avatar",
+          "foreground": "rgb(117, 90, 50)",
+          "background": [
+            238,
+            228,
+            210
+          ],
+          "contrast": 5.103798545736552
+        },
+        {
+          "selector": ".comment-footer",
+          "foreground": "rgb(112, 98, 78)",
+          "background": [
+            243,
+            239,
+            229
+          ],
+          "contrast": 5.157584145128474
+        },
+        {
+          "selector": ".comment-filter button",
+          "foreground": "rgb(117, 90, 50)",
+          "background": [
+            243,
+            239,
+            229
+          ],
+          "contrast": 5.601683880373491
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "samples": [
+        {
+          "selector": ".comment-body",
+          "foreground": "rgb(48, 53, 58)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "contrast": 12.381969283620695
+        },
+        {
+          "selector": ".comment-quote",
+          "foreground": "rgb(96, 108, 117)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "contrast": 5.385644200856913
+        },
+        {
+          "selector": ".comment-byline time",
+          "foreground": "rgb(96, 108, 117)",
+          "background": [
+            255,
+            255,
+            255
+          ],
+          "contrast": 5.385644200856913
+        },
+        {
+          "selector": ".comment-avatar",
+          "foreground": "rgb(53, 107, 94)",
+          "background": [
+            232,
+            241,
+            237
+          ],
+          "contrast": 5.338322508896565
+        },
+        {
+          "selector": ".comment-footer",
+          "foreground": "rgb(96, 108, 117)",
+          "background": [
+            247,
+            248,
+            248
+          ],
+          "contrast": 5.061801368534361
+        },
+        {
+          "selector": ".comment-filter button",
+          "foreground": "rgb(53, 107, 94)",
+          "background": [
+            247,
+            248,
+            248
+          ],
+          "contrast": 5.777740558094887
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "samples": [
+        {
+          "selector": ".comment-body",
+          "foreground": "rgb(217, 223, 226)",
+          "background": [
+            33,
+            37,
+            41
+          ],
+          "contrast": 11.462178364192157
+        },
+        {
+          "selector": ".comment-quote",
+          "foreground": "rgb(160, 173, 180)",
+          "background": [
+            33,
+            37,
+            41
+          ],
+          "contrast": 6.707644197834044
+        },
+        {
+          "selector": ".comment-byline time",
+          "foreground": "rgb(160, 173, 180)",
+          "background": [
+            33,
+            37,
+            41
+          ],
+          "contrast": 6.707644197834044
+        },
+        {
+          "selector": ".comment-avatar",
+          "foreground": "rgb(135, 184, 166)",
+          "background": [
+            41,
+            61,
+            54
+          ],
+          "contrast": 5.199313831788905
+        },
+        {
+          "selector": ".comment-footer",
+          "foreground": "rgb(160, 173, 180)",
+          "background": [
+            27,
+            31,
+            35
+          ],
+          "contrast": 7.207705204288185
+        },
+        {
+          "selector": ".comment-filter button",
+          "foreground": "rgb(135, 184, 166)",
+          "background": [
+            27,
+            31,
+            35
+          ],
+          "contrast": 7.449094288367473
+        }
+      ]
+    }
+  ],
+  "environment": {
+    "os": "win32",
+    "arch": "x64",
+    "node": "v24.22.0",
+    "electron": "39.8.3"
+  }
+}

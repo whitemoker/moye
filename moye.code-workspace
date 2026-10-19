@@ -1,0 +1,81 @@
+{
+  "folders": [{ "path": "." }],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.exclude": { "**/package-stage": true },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/release": true,
+      "**/test-results": true,
+      "**/package-stage": true
+    }
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Moye: install",
+        "type": "process",
+        "command": "npm.cmd",
+        "args": ["ci"],
+        "options": { "env": { "npm_config_cache": "${env:LOCALAPPDATA}/npm-cache" } },
+        "problemMatcher": []
+      },
+      {
+        "label": "Moye: test",
+        "type": "process",
+        "command": "npm.cmd",
+        "args": ["test"],
+        "group": "test",
+        "problemMatcher": []
+      },
+      {
+        "label": "Moye: build",
+        "type": "process",
+        "command": "npm.cmd",
+        "args": ["run", "build"],
+        "group": { "kind": "build", "isDefault": true },
+        "problemMatcher": []
+      },
+      {
+        "label": "Moye: start",
+        "type": "process",
+        "command": "npm.cmd",
+        "args": ["start"],
+        "dependsOn": "Moye: build",
+        "problemMatcher": []
+      },
+      {
+        "label": "Moye: dev server",
+        "type": "process",
+        "command": "npm.cmd",
+        "args": ["run", "dev"],
+        "problemMatcher": []
+      },
+      {
+        "label": "Moye: dev app",
+        "type": "process",
+        "command": "npm.cmd",
+        "args": ["start"],
+        "options": { "env": { "MOYE_DEV_URL": "http://127.0.0.1:5173" } },
+        "problemMatcher": []
+      },
+      {
+        "label": "Moye: e2e",
+        "type": "process",
+        "command": "npm.cmd",
+        "args": ["run", "test:e2e"],
+        "dependsOn": "Moye: build",
+        "problemMatcher": []
+      },
+      {
+        "label": "Moye: package",
+        "type": "process",
+        "command": "npm.cmd",
+        "args": ["run", "package"],
+        "problemMatcher": []
+      }
+    ]
+  }
+}

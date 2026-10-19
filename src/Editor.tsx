@@ -2,10 +2,10 @@ import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 're
 import { Crepe } from '@milkdown/crepe'
 import { editorViewCtx, editorViewOptionsCtx, commandsCtx } from '@milkdown/kit/core'
 import { callCommand, insert, $prose } from '@milkdown/kit/utils'
-import { toggleStrongCommand, toggleEmphasisCommand, toggleInlineCodeCommand, wrapInHeadingCommand, wrapInBlockquoteCommand, wrapInBulletListCommand, wrapInOrderedListCommand, turnIntoTextCommand, createCodeBlockCommand } from '@milkdown/kit/preset/commonmark'
+import { toggleStrongCommand, toggleEmphasisCommand, toggleInlineCodeCommand, createCodeBlockCommand } from '@milkdown/kit/preset/commonmark'
 import { toggleStrikethroughCommand } from '@milkdown/kit/preset/gfm'
 import { imageBlockSchema } from '@milkdown/kit/component/image-block'
-import { undo, redo } from '@milkdown/kit/prose/history'
+import { undo, redo, closeHistory } from '@milkdown/kit/prose/history'
 import { Plugin, PluginKey, TextSelection, NodeSelection, type Transaction } from '@milkdown/kit/prose/state'
 import { Decoration, DecorationSet, type EditorView as ProseView } from '@milkdown/kit/prose/view'
 import { addRowAfter, addColumnAfter, deleteRow, deleteColumn, deleteTable } from '@milkdown/kit/prose/tables'
@@ -22,10 +22,15 @@ import '@milkdown/crepe/theme/frame.css'
 import 'katex/dist/katex.min.css'
 import type { Heading } from './types'
 import { writingFocus, typewriterController } from './writingModes'
+import { codeBlockTheme } from './codeBlockTheme'
+import { commentKey, commentPlugin, commentSelection, revealComment, type Annotation } from './comments/plugin'
+import type { Anchor } from './comments/types'
+import { blockFormatCommand, isBlockFormat } from './formatCommands'
+import { sourceBlockFormat, sourceInlineFormat } from './sourceFormatting'
 
 export type EditorContext = { selectedText: string; activeFormats: string[]; canFormat: boolean }
-export type EditorHandle = { getContent(): string; context(): EditorContext; command(name: string): void; insert(text: string): void; heading(pos: number): void; search(query: string, replacement: string, action: string, caseSensitive: boolean): number; html(): string; focus(): void }
-type Props = { content: string; source: boolean; dark: boolean; typewriter: boolean; documentPath: string | null; onChange(text: string): void; onHeadings(headings: Heading[]): void; onReady(): void; onError(error: unknown): void; onImage(file: File): Promise<string> }
+export type EditorHandle = { getContent(): string; commentSelection(): Anchor | null; commentAnchors(): Record<string, Anchor>; revealComment(id: string): boolean; context(): EditorContext; command(name: string): void; insert(text: string): void; heading(pos: number): void; search(query: string, replacement: string, action: string, caseSensitive: boolean): number; html(): string; focus(): void }
+type Props = { annotations?: Annotation[]; selectedComment?: string | null; commentsOpen?: boolean; onAnchors?(anchors: Record<string, Anchor>): void; onCommentClick?(ids: string[]): void; content: string; source: boolean; dark: boolean; typewriter: boolean; documentPath: string | null; onChange(text: string): void; onHeadings(headings: Heading[]): void; onReady(): void; onError(error: unknown): void; onImage(file: File): Promise<string> }
 const searchKey = new PluginKey('moye-search')
 function matches(doc: any, query: string, caseSensitive: boolean) {
   const result: { from: number; to: number }[] = []
@@ -88,6 +93,9 @@ export default forwardRef<EditorHandle, Props>(function Editor(props, ref) {
   }
   useImperativeHandle(ref, () => ({
     getContent,
+    commentAnchors() { return rich.current?.editor.action(ctx => Object.fromEntries((commentKey.getState(ctx.get(editorViewCtx).state)?.annotations || []).map(a => [a.id, a.anchor]))) || {} },
+    commentSelection() { return rich.current?.editor.action(ctx => commentSelection(ctx.get(editorViewCtx))) || null },
+    revealComment(id) { return rich.current?.editor.action(ctx => revealComment(ctx.get(editorViewCtx), id)) || false },
     context() {
       if (code.current) { const { state } = code.current; return { selectedText: state.sliceDoc(state.selection.main.from, state.selection.main.to), activeFormats: [], canFormat: true } }
       return rich.current?.editor.action(ctx => {
@@ -105,12 +113,11 @@ export default forwardRef<EditorHandle, Props>(function Editor(props, ref) {
     focus() { code.current?.focus(); rich.current?.editor.action(ctx => ctx.get(editorViewCtx).focus()) },
     command(name) {
       if (code.current) {
-        const view = code.current, selection = view.state.selection.main
+        const view = code.current
         if (name === 'undo' || name === 'redo') { (name === 'undo' ? codeUndo : codeRedo)(view); view.focus(); return }
-        const pairs: Record<string, [string, string]> = { bold: ['**', '**'], italic: ['*', '*'], strike: ['~~', '~~'], code: ['`', '`'], link: ['[', '](https://)'], 'inline-math': ['$', '$'] }
-        if (pairs[name]) { const [left, right] = pairs[name]; view.dispatch({ changes: { from: selection.from, to: selection.to, insert: left + view.state.sliceDoc(selection.from, selection.to) + right }, selection: { anchor: selection.from + left.length, head: selection.to + left.length } }); view.focus(); return }
-        const prefixes: Record<string, string> = { h1: '# ', h2: '## ', h3: '### ', h4: '#### ', quote: '> ', bullet: '- ', ordered: '1. ', task: '- [ ] ', paragraph: '' }
-        if (name in prefixes) { const line = view.state.doc.lineAt(selection.from); const old = /^(#{1,6}\s|>\s|[-*+]\s(?:\[[ x]\]\s)?|\d+\.\s)/.exec(line.text); view.dispatch({ changes: { from: line.from, to: line.from + (old?.[0].length || 0), insert: prefixes[name] } }); view.focus() }
+        const change = isBlockFormat(name) ? sourceBlockFormat(view.state, name) : sourceInlineFormat(view.state, name)
+        if (change) view.dispatch(change)
+        view.focus()
         return
       }
       const editor = rich.current?.editor
@@ -119,10 +126,12 @@ export default forwardRef<EditorHandle, Props>(function Editor(props, ref) {
       const tableCommands: Record<string, typeof addRowAfter> = { 'table-row': addRowAfter, 'table-col': addColumnAfter, 'table-delete-row': deleteRow, 'table-delete-col': deleteColumn, 'table-delete': deleteTable }
       if (tableCommands[name]) { editor.action(ctx => { const view = ctx.get(editorViewCtx); tableCommands[name](view.state, view.dispatch); view.focus() }); return }
       if (name === 'undo' || name === 'redo') { editor.action(ctx => { const view = ctx.get(editorViewCtx); (name === 'undo' ? undo : redo)(view.state, view.dispatch); view.focus() }); return }
-      const commands: Record<string, any> = { bold: toggleStrongCommand.key, italic: toggleEmphasisCommand.key, code: toggleInlineCodeCommand.key, strike: toggleStrikethroughCommand.key, paragraph: turnIntoTextCommand.key, quote: wrapInBlockquoteCommand.key, bullet: wrapInBulletListCommand.key, ordered: wrapInOrderedListCommand.key, codeblock: createCodeBlockCommand.key }
-      if (/^h[1-6]$/.test(name)) editor.action(callCommand(wrapInHeadingCommand.key, Number(name[1])))
+      const commands: Record<string, any> = { bold: toggleStrongCommand.key, italic: toggleEmphasisCommand.key, code: toggleInlineCodeCommand.key, strike: toggleStrikethroughCommand.key, codeblock: createCodeBlockCommand.key }
+      if (isBlockFormat(name)) editor.action(ctx => {
+        const view = ctx.get(editorViewCtx)
+        if (blockFormatCommand(name)(view.state, view.dispatch)) view.dispatch(closeHistory(view.state.tr))
+      })
       else if (commands[name]) editor.action(callCommand(commands[name]))
-      else if (name === 'task') editor.action(insert('- [ ] 待办事项'))
       editor.action(ctx => ctx.get(editorViewCtx).focus())
     },
     insert(text) {
@@ -172,6 +181,7 @@ export default forwardRef<EditorHandle, Props>(function Editor(props, ref) {
     code.current?.dispatch({ effects: codeTheme.current.reconfigure(props.dark ? [oneDark] : []) })
   }, [props.dark])
   useEffect(() => { typewriter.current?.schedule() }, [props.typewriter])
+  useEffect(() => { rich.current?.editor.action(ctx => { const view = ctx.get(editorViewCtx); view.dispatch(view.state.tr.setMeta(commentKey, { annotations: callback.current.annotations || [], selected: props.selectedComment || null, expanded: !!props.commentsOpen })) }) }, [props.annotations, props.selectedComment, props.commentsOpen, loading])
 
   useEffect(() => {
     let cancelled = false
@@ -211,7 +221,7 @@ export default forwardRef<EditorHandle, Props>(function Editor(props, ref) {
           blockUploadButton: '选择图片', inlineUploadButton: '选择图片', blockUploadPlaceholderText: '粘贴图片地址，或选择本地图片', inlineUploadPlaceholderText: '图片地址', blockCaptionPlaceholderText: '图片说明',
         },
         [Crepe.Feature.LinkTooltip]: { inputPlaceholder: '粘贴或输入链接' },
-        [Crepe.Feature.CodeMirror]: { searchPlaceholder: '选择语言', noResultText: '没有匹配的语言' },
+        [Crepe.Feature.CodeMirror]: { theme: codeBlockTheme, searchPlaceholder: '选择语言', noResultText: '没有匹配的语言' },
         [Crepe.Feature.Latex]: { katexOptions: { throwOnError: false } },
       },
     })
@@ -237,7 +247,7 @@ export default forwardRef<EditorHandle, Props>(function Editor(props, ref) {
         }
       },
     }))
-    crepe.editor.use(searchPlugin).use(linkPlugin).use($prose(writingFocus)).use(modePlugin)
+    crepe.editor.use(searchPlugin).use(linkPlugin).use($prose(writingFocus)).use(modePlugin).use($prose(() => commentPlugin(callback.current.annotations || [], anchors => callback.current.onAnchors?.(anchors), ids => callback.current.onCommentClick?.(ids))))
     crepe.editor.config(ctx => ctx.update(editorViewOptionsCtx, options => ({
       ...options,
       dispatchTransaction(this: ProseView, transaction: Transaction) {

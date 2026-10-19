@@ -1,0 +1,44 @@
+/* Keep all six heading levels on one scale instead of inheriting H5/H6
+   from Crepe's larger default headings. Sizes follow the body-size setting. */
+.app .milkdown .ProseMirror h1 {
+  font-size: 2em;
+  margin: 0 0 1.1em;
+  padding: .1em 0 .55em;
+  border-bottom: 1px solid var(--border);
+}
+.app .milkdown .ProseMirror h2 {
+  font-size: 1.7em;
+  margin: 1.8em 0 .8em;
+  padding-bottom: .35em;
+  border-bottom: 1px solid var(--border);
+}
+.app .milkdown .ProseMirror h3 { font-size: 1.45em; margin: 1.7em 0 .7em; }
+.app .milkdown .ProseMirror h4 { font-size: 1.25em; margin: 1.5em 0 .7em; }
+.app .milkdown .ProseMirror h5 { font-size: 1.125em; margin: 1.5em 0 .7em; }
+.app .milkdown .ProseMirror h6 { font-size: 1.0625em; margin: 1.5em 0 .7em; }
+
+.app .milkdown .ProseMirror {
+  --list-line-height: 1.85;
+  --list-text-inset: 4px;
+  --list-paragraph-margin: .3em;
+}
+.app .milkdown .ProseMirror li > .children > .content-dom > p {
+  line-height: var(--list-line-height);
+  padding: var(--list-text-inset) 0;
+  margin: var(--list-paragraph-margin) 0;
+}
+/* The marker shares the first text line's padding and margin. It must not
+   center against the whole item: wrapped text and nested lists stay below it. */
+.app .milkdown .ProseMirror li > .label-wrapper {
+  height: calc(1em * var(--list-line-height) + 2 * var(--list-text-inset));
+  margin-block: var(--list-paragraph-margin);
+  flex: 0 0 24px;
+}
+.app .milkdown .ProseMirror li > .label-wrapper > .label {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: var(--list-line-height);
+}

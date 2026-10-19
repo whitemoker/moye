@@ -1,0 +1,1938 @@
+{
+  "targetVersion": "0.2.0",
+  "candidateVersion": "0.2.0-rc.3",
+  "verifiedDate": "2026-10-19",
+  "sourceSha256": {
+    "src/editor-typography.css": "ce5a4d00b2e27baed7d4931960a1a156d3ad46ed4e799390772cd5553b8866ea",
+    "src/style.css": "3bc05de6398947fcd371173805419686a9ec823b4438a7808724e68441e433a6",
+    "package.json": "5dfa116667e4cef3ed18db579c06f807a0cddcac57c4b9d0a96b5ea9235b8874",
+    "package-lock.json": "2d7c9a37c3ba00bd70aaedb6341b4c962bcc4d15a9b676da6537726f6b77dac0",
+    "tests/editor-typography-e2e.mjs": "8f88a51897f2eca947c86b68bd7ac06773fccfeb6c84a0c418b8e86579e07ea9"
+  },
+  "before": {
+    "version": "0.2.0-rc.2",
+    "executable": "C:\\Users\\23237\\OneDrive\\Desktop\\moye\\release\\0.2.0-rc.2\\Moye-win32-x64\\Moye.exe",
+    "asarSha256": "dc35bc916b585685e0f4480f8edb120d64dcdb0e979268446b5cd33e80e887f8",
+    "states": [
+      {
+        "theme": "paper",
+        "fontSize": 13,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26.65
+          },
+          {
+            "level": "H2",
+            "size": 18.46
+          },
+          {
+            "level": "H3",
+            "size": 14.82
+          },
+          {
+            "level": "H4",
+            "size": 13
+          },
+          {
+            "level": "H5",
+            "size": 19.5
+          },
+          {
+            "level": "H6",
+            "size": 14.625
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 3.9416564941406023,
+        "maxAbsGlyphDelta": 3.916656494140625,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 512.8333435058594,
+          "textCenter": 516.7291870117188,
+          "firstLineCenter": 516.7541870117187,
+          "lineDelta": -3.9208435058593523,
+          "glyphDelta": -3.895843505859375,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "paper",
+        "fontSize": 16,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32.8
+          },
+          {
+            "level": "H2",
+            "size": 22.72
+          },
+          {
+            "level": "H3",
+            "size": 18.24
+          },
+          {
+            "level": "H4",
+            "size": 16
+          },
+          {
+            "level": "H5",
+            "size": 24
+          },
+          {
+            "level": "H6",
+            "size": 18
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 7.7166564941405795,
+        "maxAbsGlyphDelta": 7.58331298828125,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 584.28125,
+          "textCenter": 591.7395935058594,
+          "firstLineCenter": 591.8729370117187,
+          "lineDelta": -7.5916870117187045,
+          "glyphDelta": -7.458343505859375,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "paper",
+        "fontSize": 24,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 49.2
+          },
+          {
+            "level": "H2",
+            "size": 34.08
+          },
+          {
+            "level": "H3",
+            "size": 27.36
+          },
+          {
+            "level": "H4",
+            "size": 24
+          },
+          {
+            "level": "H5",
+            "size": 36
+          },
+          {
+            "level": "H6",
+            "size": 27
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 17.595751953125045,
+        "maxAbsGlyphDelta": 17.395751953125,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 775.625,
+          "textCenter": 792.8229370117188,
+          "firstLineCenter": 793.0229370117188,
+          "lineDelta": -17.397937011718795,
+          "glyphDelta": -17.19793701171875,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "paper",
+        "fontSize": 13,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26.65
+          },
+          {
+            "level": "H2",
+            "size": 18.46
+          },
+          {
+            "level": "H3",
+            "size": 14.82
+          },
+          {
+            "level": "H4",
+            "size": 13
+          },
+          {
+            "level": "H5",
+            "size": 19.5
+          },
+          {
+            "level": "H6",
+            "size": 14.625
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 3.9416564941406023,
+        "maxAbsGlyphDelta": 3.916656494140625,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 512.8333435058594,
+          "textCenter": 516.7291717529297,
+          "firstLineCenter": 516.7541870117187,
+          "lineDelta": -3.9208435058593523,
+          "glyphDelta": -3.8958282470703125,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "paper",
+        "fontSize": 16,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32.8
+          },
+          {
+            "level": "H2",
+            "size": 22.72
+          },
+          {
+            "level": "H3",
+            "size": 18.24
+          },
+          {
+            "level": "H4",
+            "size": 16
+          },
+          {
+            "level": "H5",
+            "size": 24
+          },
+          {
+            "level": "H6",
+            "size": 18
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 8.049999999999955,
+        "maxAbsGlyphDelta": 7.58331298828125,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 584.28125,
+          "textCenter": 591.40625,
+          "firstLineCenter": 591.8729370117187,
+          "lineDelta": -7.5916870117187045,
+          "glyphDelta": -7.125,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "paper",
+        "fontSize": 24,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 49.2
+          },
+          {
+            "level": "H2",
+            "size": 34.08
+          },
+          {
+            "level": "H3",
+            "size": 27.36
+          },
+          {
+            "level": "H4",
+            "size": 24
+          },
+          {
+            "level": "H5",
+            "size": 36
+          },
+          {
+            "level": "H6",
+            "size": 27
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 17.929125976562545,
+        "maxAbsGlyphDelta": 17.39581298828125,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 775.625,
+          "textCenter": 792.4895935058594,
+          "firstLineCenter": 793.0229370117188,
+          "lineDelta": -17.397937011718795,
+          "glyphDelta": -16.864593505859375,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 13,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26.65
+          },
+          {
+            "level": "H2",
+            "size": 18.46
+          },
+          {
+            "level": "H3",
+            "size": 14.82
+          },
+          {
+            "level": "H4",
+            "size": 13
+          },
+          {
+            "level": "H5",
+            "size": 19.5
+          },
+          {
+            "level": "H6",
+            "size": 14.625
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 3.9416564941406023,
+        "maxAbsGlyphDelta": 3.916656494140625,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 512.8333435058594,
+          "textCenter": 516.7291870117188,
+          "firstLineCenter": 516.7541870117187,
+          "lineDelta": -3.9208435058593523,
+          "glyphDelta": -3.895843505859375,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 16,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32.8
+          },
+          {
+            "level": "H2",
+            "size": 22.72
+          },
+          {
+            "level": "H3",
+            "size": 18.24
+          },
+          {
+            "level": "H4",
+            "size": 16
+          },
+          {
+            "level": "H5",
+            "size": 24
+          },
+          {
+            "level": "H6",
+            "size": 18
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 7.7166564941405795,
+        "maxAbsGlyphDelta": 7.58331298828125,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 584.28125,
+          "textCenter": 591.7395935058594,
+          "firstLineCenter": 591.8729370117187,
+          "lineDelta": -7.5916870117187045,
+          "glyphDelta": -7.458343505859375,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 24,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 49.2
+          },
+          {
+            "level": "H2",
+            "size": 34.08
+          },
+          {
+            "level": "H3",
+            "size": 27.36
+          },
+          {
+            "level": "H4",
+            "size": 24
+          },
+          {
+            "level": "H5",
+            "size": 36
+          },
+          {
+            "level": "H6",
+            "size": 27
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 17.595751953125045,
+        "maxAbsGlyphDelta": 17.395751953125,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 775.625,
+          "textCenter": 792.8229370117188,
+          "firstLineCenter": 793.0229370117188,
+          "lineDelta": -17.397937011718795,
+          "glyphDelta": -17.19793701171875,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 13,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26.65
+          },
+          {
+            "level": "H2",
+            "size": 18.46
+          },
+          {
+            "level": "H3",
+            "size": 14.82
+          },
+          {
+            "level": "H4",
+            "size": 13
+          },
+          {
+            "level": "H5",
+            "size": 19.5
+          },
+          {
+            "level": "H6",
+            "size": 14.625
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 3.9416564941406023,
+        "maxAbsGlyphDelta": 3.916656494140625,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 512.8333435058594,
+          "textCenter": 516.7291717529297,
+          "firstLineCenter": 516.7541870117187,
+          "lineDelta": -3.9208435058593523,
+          "glyphDelta": -3.8958282470703125,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 16,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32.8
+          },
+          {
+            "level": "H2",
+            "size": 22.72
+          },
+          {
+            "level": "H3",
+            "size": 18.24
+          },
+          {
+            "level": "H4",
+            "size": 16
+          },
+          {
+            "level": "H5",
+            "size": 24
+          },
+          {
+            "level": "H6",
+            "size": 18
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 8.049999999999955,
+        "maxAbsGlyphDelta": 7.58331298828125,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 584.28125,
+          "textCenter": 591.40625,
+          "firstLineCenter": 591.8729370117187,
+          "lineDelta": -7.5916870117187045,
+          "glyphDelta": -7.125,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 24,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 49.2
+          },
+          {
+            "level": "H2",
+            "size": 34.08
+          },
+          {
+            "level": "H3",
+            "size": 27.36
+          },
+          {
+            "level": "H4",
+            "size": 24
+          },
+          {
+            "level": "H5",
+            "size": 36
+          },
+          {
+            "level": "H6",
+            "size": 27
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 17.929125976562545,
+        "maxAbsGlyphDelta": 17.39581298828125,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 775.625,
+          "textCenter": 792.4895935058594,
+          "firstLineCenter": 793.0229370117188,
+          "lineDelta": -17.397937011718795,
+          "glyphDelta": -16.864593505859375,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 13,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26.65
+          },
+          {
+            "level": "H2",
+            "size": 18.46
+          },
+          {
+            "level": "H3",
+            "size": 14.82
+          },
+          {
+            "level": "H4",
+            "size": 13
+          },
+          {
+            "level": "H5",
+            "size": 19.5
+          },
+          {
+            "level": "H6",
+            "size": 14.625
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 3.9416564941406023,
+        "maxAbsGlyphDelta": 3.916656494140625,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 512.8333435058594,
+          "textCenter": 516.7291870117188,
+          "firstLineCenter": 516.7541870117187,
+          "lineDelta": -3.9208435058593523,
+          "glyphDelta": -3.895843505859375,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 16,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32.8
+          },
+          {
+            "level": "H2",
+            "size": 22.72
+          },
+          {
+            "level": "H3",
+            "size": 18.24
+          },
+          {
+            "level": "H4",
+            "size": 16
+          },
+          {
+            "level": "H5",
+            "size": 24
+          },
+          {
+            "level": "H6",
+            "size": 18
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 7.7166564941405795,
+        "maxAbsGlyphDelta": 7.58331298828125,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 584.28125,
+          "textCenter": 591.7395935058594,
+          "firstLineCenter": 591.8729370117187,
+          "lineDelta": -7.5916870117187045,
+          "glyphDelta": -7.458343505859375,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 24,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 49.2
+          },
+          {
+            "level": "H2",
+            "size": 34.08
+          },
+          {
+            "level": "H3",
+            "size": 27.36
+          },
+          {
+            "level": "H4",
+            "size": 24
+          },
+          {
+            "level": "H5",
+            "size": 36
+          },
+          {
+            "level": "H6",
+            "size": 27
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 17.595751953125045,
+        "maxAbsGlyphDelta": 17.395751953125,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 775.625,
+          "textCenter": 792.8229370117188,
+          "firstLineCenter": 793.0229370117188,
+          "lineDelta": -17.397937011718795,
+          "glyphDelta": -17.19793701171875,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 13,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26.65
+          },
+          {
+            "level": "H2",
+            "size": 18.46
+          },
+          {
+            "level": "H3",
+            "size": 14.82
+          },
+          {
+            "level": "H4",
+            "size": 13
+          },
+          {
+            "level": "H5",
+            "size": 19.5
+          },
+          {
+            "level": "H6",
+            "size": 14.625
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 3.9416564941406023,
+        "maxAbsGlyphDelta": 3.916656494140625,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 512.8333435058594,
+          "textCenter": 516.7291717529297,
+          "firstLineCenter": 516.7541870117187,
+          "lineDelta": -3.9208435058593523,
+          "glyphDelta": -3.8958282470703125,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 16,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32.8
+          },
+          {
+            "level": "H2",
+            "size": 22.72
+          },
+          {
+            "level": "H3",
+            "size": 18.24
+          },
+          {
+            "level": "H4",
+            "size": 16
+          },
+          {
+            "level": "H5",
+            "size": 24
+          },
+          {
+            "level": "H6",
+            "size": 18
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 8.049999999999955,
+        "maxAbsGlyphDelta": 7.58331298828125,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 584.28125,
+          "textCenter": 591.40625,
+          "firstLineCenter": 591.8729370117187,
+          "lineDelta": -7.5916870117187045,
+          "glyphDelta": -7.125,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 24,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 49.2
+          },
+          {
+            "level": "H2",
+            "size": 34.08
+          },
+          {
+            "level": "H3",
+            "size": 27.36
+          },
+          {
+            "level": "H4",
+            "size": 24
+          },
+          {
+            "level": "H5",
+            "size": 36
+          },
+          {
+            "level": "H6",
+            "size": 27
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 17.929125976562545,
+        "maxAbsGlyphDelta": 17.39581298828125,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 775.625,
+          "textCenter": 792.4895935058594,
+          "firstLineCenter": 793.0229370117188,
+          "lineDelta": -17.397937011718795,
+          "glyphDelta": -16.864593505859375,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32px",
+          "wrapperHeight": "32px"
+        }
+      }
+    ],
+    "checks": [],
+    "errors": []
+  },
+  "after": {
+    "version": "0.2.0-rc.3",
+    "executable": "C:\\Users\\23237\\OneDrive\\Desktop\\moye\\release\\0.2.0-rc.3\\Moye-win32-x64\\Moye.exe",
+    "asarSha256": "592ef2c168b01a01ae3bdfd4a61d99324b77bb334a7c61a48e686e05b47212be",
+    "states": [
+      {
+        "theme": "paper",
+        "fontSize": 13,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26
+          },
+          {
+            "level": "H2",
+            "size": 22.1
+          },
+          {
+            "level": "H3",
+            "size": 18.85
+          },
+          {
+            "level": "H4",
+            "size": 16.25
+          },
+          {
+            "level": "H5",
+            "size": 14.625
+          },
+          {
+            "level": "H6",
+            "size": 13.8125
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.024999999999977263,
+        "maxAbsGlyphDelta": 0.020843505859375,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 553.1875,
+          "textCenter": 553.1666870117188,
+          "firstLineCenter": 553.1916870117187,
+          "lineDelta": -0.004187011718727263,
+          "glyphDelta": 0.02081298828125,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32.0417px",
+          "wrapperHeight": "32.0417px"
+        }
+      },
+      {
+        "theme": "paper",
+        "fontSize": 16,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32
+          },
+          {
+            "level": "H2",
+            "size": 27.2
+          },
+          {
+            "level": "H3",
+            "size": 23.2
+          },
+          {
+            "level": "H4",
+            "size": 20
+          },
+          {
+            "level": "H5",
+            "size": 18
+          },
+          {
+            "level": "H6",
+            "size": 17
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.13334350585932953,
+        "maxAbsGlyphDelta": 0.125030517578125,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 644.09375,
+          "textCenter": 643.9687805175781,
+          "firstLineCenter": 644.1021240234375,
+          "lineDelta": -0.008374023437454525,
+          "glyphDelta": 0.124969482421875,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "37.5938px",
+          "wrapperHeight": "37.5938px"
+        }
+      },
+      {
+        "theme": "paper",
+        "fontSize": 24,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 48
+          },
+          {
+            "level": "H2",
+            "size": 40.8
+          },
+          {
+            "level": "H3",
+            "size": 34.8
+          },
+          {
+            "level": "H4",
+            "size": 30
+          },
+          {
+            "level": "H5",
+            "size": 27
+          },
+          {
+            "level": "H6",
+            "size": 25.5
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.20000000000004547,
+        "maxAbsGlyphDelta": 0.197998046875,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 886.5416870117188,
+          "textCenter": 886.34375,
+          "firstLineCenter": 886.54375,
+          "lineDelta": -0.0020629882812954747,
+          "glyphDelta": 0.19793701171875,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "52.3958px",
+          "wrapperHeight": "52.3958px"
+        }
+      },
+      {
+        "theme": "paper",
+        "fontSize": 13,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26
+          },
+          {
+            "level": "H2",
+            "size": 22.1
+          },
+          {
+            "level": "H3",
+            "size": 18.85
+          },
+          {
+            "level": "H4",
+            "size": 16.25
+          },
+          {
+            "level": "H5",
+            "size": 14.625
+          },
+          {
+            "level": "H6",
+            "size": 13.8125
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.024999999999977263,
+        "maxAbsGlyphDelta": 0.020843505859375,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 553.1875,
+          "textCenter": 553.1666870117188,
+          "firstLineCenter": 553.1916870117187,
+          "lineDelta": -0.004187011718727263,
+          "glyphDelta": 0.02081298828125,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32.0417px",
+          "wrapperHeight": "32.0417px"
+        }
+      },
+      {
+        "theme": "paper",
+        "fontSize": 16,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32
+          },
+          {
+            "level": "H2",
+            "size": 27.2
+          },
+          {
+            "level": "H3",
+            "size": 23.2
+          },
+          {
+            "level": "H4",
+            "size": 20
+          },
+          {
+            "level": "H5",
+            "size": 18
+          },
+          {
+            "level": "H6",
+            "size": 17
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.4666870117187045,
+        "maxAbsGlyphDelta": 0.4583740234375,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 644.09375,
+          "textCenter": 643.6354370117188,
+          "firstLineCenter": 644.1021240234375,
+          "lineDelta": -0.008374023437454525,
+          "glyphDelta": 0.45831298828125,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "37.5938px",
+          "wrapperHeight": "37.5938px"
+        }
+      },
+      {
+        "theme": "paper",
+        "fontSize": 24,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 48
+          },
+          {
+            "level": "H2",
+            "size": 40.8
+          },
+          {
+            "level": "H3",
+            "size": 34.8
+          },
+          {
+            "level": "H4",
+            "size": 30
+          },
+          {
+            "level": "H5",
+            "size": 27
+          },
+          {
+            "level": "H6",
+            "size": 25.5
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.5333129882812955,
+        "maxAbsGlyphDelta": 0.53131103515625,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 886.5416870117188,
+          "textCenter": 886.0104370117188,
+          "firstLineCenter": 886.54375,
+          "lineDelta": -0.0020629882812954747,
+          "glyphDelta": 0.53125,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "52.3958px",
+          "wrapperHeight": "52.3958px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 13,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26
+          },
+          {
+            "level": "H2",
+            "size": 22.1
+          },
+          {
+            "level": "H3",
+            "size": 18.85
+          },
+          {
+            "level": "H4",
+            "size": 16.25
+          },
+          {
+            "level": "H5",
+            "size": 14.625
+          },
+          {
+            "level": "H6",
+            "size": 13.8125
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.024999999999977263,
+        "maxAbsGlyphDelta": 0.020843505859375,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 553.1875,
+          "textCenter": 553.1666870117188,
+          "firstLineCenter": 553.1916870117187,
+          "lineDelta": -0.004187011718727263,
+          "glyphDelta": 0.02081298828125,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32.0417px",
+          "wrapperHeight": "32.0417px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 16,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32
+          },
+          {
+            "level": "H2",
+            "size": 27.2
+          },
+          {
+            "level": "H3",
+            "size": 23.2
+          },
+          {
+            "level": "H4",
+            "size": 20
+          },
+          {
+            "level": "H5",
+            "size": 18
+          },
+          {
+            "level": "H6",
+            "size": 17
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.13334350585932953,
+        "maxAbsGlyphDelta": 0.125030517578125,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 644.09375,
+          "textCenter": 643.9687805175781,
+          "firstLineCenter": 644.1021240234375,
+          "lineDelta": -0.008374023437454525,
+          "glyphDelta": 0.124969482421875,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "37.5938px",
+          "wrapperHeight": "37.5938px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 24,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 48
+          },
+          {
+            "level": "H2",
+            "size": 40.8
+          },
+          {
+            "level": "H3",
+            "size": 34.8
+          },
+          {
+            "level": "H4",
+            "size": 30
+          },
+          {
+            "level": "H5",
+            "size": 27
+          },
+          {
+            "level": "H6",
+            "size": 25.5
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.20000000000004547,
+        "maxAbsGlyphDelta": 0.197998046875,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 886.5416870117188,
+          "textCenter": 886.34375,
+          "firstLineCenter": 886.54375,
+          "lineDelta": -0.0020629882812954747,
+          "glyphDelta": 0.19793701171875,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "52.3958px",
+          "wrapperHeight": "52.3958px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 13,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26
+          },
+          {
+            "level": "H2",
+            "size": 22.1
+          },
+          {
+            "level": "H3",
+            "size": 18.85
+          },
+          {
+            "level": "H4",
+            "size": 16.25
+          },
+          {
+            "level": "H5",
+            "size": 14.625
+          },
+          {
+            "level": "H6",
+            "size": 13.8125
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.024999999999977263,
+        "maxAbsGlyphDelta": 0.020843505859375,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 553.1875,
+          "textCenter": 553.1666870117188,
+          "firstLineCenter": 553.1916870117187,
+          "lineDelta": -0.004187011718727263,
+          "glyphDelta": 0.02081298828125,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32.0417px",
+          "wrapperHeight": "32.0417px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 16,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32
+          },
+          {
+            "level": "H2",
+            "size": 27.2
+          },
+          {
+            "level": "H3",
+            "size": 23.2
+          },
+          {
+            "level": "H4",
+            "size": 20
+          },
+          {
+            "level": "H5",
+            "size": 18
+          },
+          {
+            "level": "H6",
+            "size": 17
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.4666870117187045,
+        "maxAbsGlyphDelta": 0.4583740234375,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 644.09375,
+          "textCenter": 643.6354370117188,
+          "firstLineCenter": 644.1021240234375,
+          "lineDelta": -0.008374023437454525,
+          "glyphDelta": 0.45831298828125,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "37.5938px",
+          "wrapperHeight": "37.5938px"
+        }
+      },
+      {
+        "theme": "light",
+        "fontSize": 24,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 48
+          },
+          {
+            "level": "H2",
+            "size": 40.8
+          },
+          {
+            "level": "H3",
+            "size": 34.8
+          },
+          {
+            "level": "H4",
+            "size": 30
+          },
+          {
+            "level": "H5",
+            "size": 27
+          },
+          {
+            "level": "H6",
+            "size": 25.5
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.5333129882812955,
+        "maxAbsGlyphDelta": 0.53131103515625,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 886.5416870117188,
+          "textCenter": 886.0104370117188,
+          "firstLineCenter": 886.54375,
+          "lineDelta": -0.0020629882812954747,
+          "glyphDelta": 0.53125,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "52.3958px",
+          "wrapperHeight": "52.3958px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 13,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26
+          },
+          {
+            "level": "H2",
+            "size": 22.1
+          },
+          {
+            "level": "H3",
+            "size": 18.85
+          },
+          {
+            "level": "H4",
+            "size": 16.25
+          },
+          {
+            "level": "H5",
+            "size": 14.625
+          },
+          {
+            "level": "H6",
+            "size": 13.8125
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.024999999999977263,
+        "maxAbsGlyphDelta": 0.020843505859375,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 553.1875,
+          "textCenter": 553.1666870117188,
+          "firstLineCenter": 553.1916870117187,
+          "lineDelta": -0.004187011718727263,
+          "glyphDelta": 0.02081298828125,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32.0417px",
+          "wrapperHeight": "32.0417px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 16,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32
+          },
+          {
+            "level": "H2",
+            "size": 27.2
+          },
+          {
+            "level": "H3",
+            "size": 23.2
+          },
+          {
+            "level": "H4",
+            "size": 20
+          },
+          {
+            "level": "H5",
+            "size": 18
+          },
+          {
+            "level": "H6",
+            "size": 17
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.13334350585932953,
+        "maxAbsGlyphDelta": 0.125030517578125,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 644.09375,
+          "textCenter": 643.9687805175781,
+          "firstLineCenter": 644.1021240234375,
+          "lineDelta": -0.008374023437454525,
+          "glyphDelta": 0.124969482421875,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "37.5938px",
+          "wrapperHeight": "37.5938px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 24,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 48
+          },
+          {
+            "level": "H2",
+            "size": 40.8
+          },
+          {
+            "level": "H3",
+            "size": 34.8
+          },
+          {
+            "level": "H4",
+            "size": 30
+          },
+          {
+            "level": "H5",
+            "size": 27
+          },
+          {
+            "level": "H6",
+            "size": 25.5
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.20000000000004547,
+        "maxAbsGlyphDelta": 0.197998046875,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 886.5416870117188,
+          "textCenter": 886.34375,
+          "firstLineCenter": 886.54375,
+          "lineDelta": -0.0020629882812954747,
+          "glyphDelta": 0.19793701171875,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "52.3958px",
+          "wrapperHeight": "52.3958px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 13,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 26
+          },
+          {
+            "level": "H2",
+            "size": 22.1
+          },
+          {
+            "level": "H3",
+            "size": 18.85
+          },
+          {
+            "level": "H4",
+            "size": 16.25
+          },
+          {
+            "level": "H5",
+            "size": 14.625
+          },
+          {
+            "level": "H6",
+            "size": 13.8125
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.024999999999977263,
+        "maxAbsGlyphDelta": 0.020843505859375,
+        "longTaskHeight": 56.083335876464844,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 553.1875,
+          "textCenter": 553.1666870117188,
+          "firstLineCenter": 553.1916870117187,
+          "lineDelta": -0.004187011718727263,
+          "glyphDelta": 0.02081298828125,
+          "lineHeight": 24.05,
+          "paragraphHeight": 32.04166793823242,
+          "markerWidth": 24,
+          "paragraphMargin": "3.9px",
+          "paragraphPadding": "4px",
+          "labelHeight": "32.0417px",
+          "wrapperHeight": "32.0417px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 16,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32
+          },
+          {
+            "level": "H2",
+            "size": 27.2
+          },
+          {
+            "level": "H3",
+            "size": 23.2
+          },
+          {
+            "level": "H4",
+            "size": 20
+          },
+          {
+            "level": "H5",
+            "size": 18
+          },
+          {
+            "level": "H6",
+            "size": 17
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.4666870117187045,
+        "maxAbsGlyphDelta": 0.4583740234375,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 644.09375,
+          "textCenter": 643.6354370117188,
+          "firstLineCenter": 644.1021240234375,
+          "lineDelta": -0.008374023437454525,
+          "glyphDelta": 0.45831298828125,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "37.5938px",
+          "wrapperHeight": "37.5938px"
+        }
+      },
+      {
+        "theme": "dark",
+        "fontSize": 24,
+        "serif": true,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 48
+          },
+          {
+            "level": "H2",
+            "size": 40.8
+          },
+          {
+            "level": "H3",
+            "size": 34.8
+          },
+          {
+            "level": "H4",
+            "size": 30
+          },
+          {
+            "level": "H5",
+            "size": 27
+          },
+          {
+            "level": "H6",
+            "size": 25.5
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.5333129882812955,
+        "maxAbsGlyphDelta": 0.53131103515625,
+        "longTaskHeight": 141.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 886.5416870117188,
+          "textCenter": 886.0104370117188,
+          "firstLineCenter": 886.54375,
+          "lineDelta": -0.0020629882812954747,
+          "glyphDelta": 0.53125,
+          "lineHeight": 44.4,
+          "paragraphHeight": 52.395835876464844,
+          "markerWidth": 24,
+          "paragraphMargin": "7.2px",
+          "paragraphPadding": "4px",
+          "labelHeight": "52.3958px",
+          "wrapperHeight": "52.3958px"
+        }
+      },
+      {
+        "theme": "paper-roundtrip",
+        "fontSize": 16,
+        "serif": false,
+        "headings": [
+          {
+            "level": "H1",
+            "size": 32
+          },
+          {
+            "level": "H2",
+            "size": 27.2
+          },
+          {
+            "level": "H3",
+            "size": 23.2
+          },
+          {
+            "level": "H4",
+            "size": 20
+          },
+          {
+            "level": "H5",
+            "size": 18
+          },
+          {
+            "level": "H6",
+            "size": 17
+          }
+        ],
+        "markerCount": 6,
+        "maxAbsLineDelta": 0.13334350585932953,
+        "maxAbsGlyphDelta": 0.125030517578125,
+        "longTaskHeight": 67.1875,
+        "firstTask": {
+          "text": "这一项可以试试取消任务清单。",
+          "kind": "milkdown-icon label unchecked",
+          "markerCenter": 644.09375,
+          "textCenter": 643.9687805175781,
+          "firstLineCenter": 644.1021240234375,
+          "lineDelta": -0.008374023437454525,
+          "glyphDelta": 0.124969482421875,
+          "lineHeight": 29.6,
+          "paragraphHeight": 37.59375,
+          "markerWidth": 24,
+          "paragraphMargin": "4.8px",
+          "paragraphPadding": "4px",
+          "labelHeight": "37.5938px",
+          "wrapperHeight": "37.5938px"
+        }
+      }
+    ],
+    "checks": [
+      "Checkbox toggles and one undo restores state without changing text",
+      "Source/rich round trip preserves task state and typography"
+    ],
+    "errors": []
+  },
+  "formatRegression": {
+    "version": "0.2.0-rc.3",
+    "executable": "C:\\Users\\23237\\OneDrive\\Desktop\\moye\\release\\0.2.0-rc.3\\Moye-win32-x64\\Moye.exe",
+    "asarSha256": "592ef2c168b01a01ae3bdfd4a61d99324b77bb334a7c61a48e686e05b47212be",
+    "results": [
+      "实际 Ctrl+1–6 同级取消、跨级切换、菜单 H5/H6 与撤销",
+      "列表菜单转换、同类取消和任务清单保留原文",
+      "引用取消保留加粗，标题/引用/列表操作后的评论仍定位原文",
+      "查找、快速打开、评论输入和中文组合输入不改变正文；长按不反复切换",
+      "代码编辑区域中标题快捷键与菜单不改代码",
+      "源码 H5/H6、加粗重复取消和撤销；选中多行列表逐行处理"
+    ],
+    "errors": [],
+    "productAcceptance": "pending"
+  },
+  "productAcceptance": "pending",
+  "finalDeliveryVersion": null,
+  "implementationCommit": null
+}
