@@ -1932,7 +1932,10 @@
     "errors": [],
     "productAcceptance": "pending"
   },
-  "productAcceptance": "pending",
-  "finalDeliveryVersion": null,
-  "implementationCommit": null
+  "productAcceptance": "accepted",
+  "finalDeliveryVersion": "0.2.0-rc.3",
+  "implementationCommit": "1bdb519ecc264049bb583e55132d47943fa0acab",
+  "acceptanceDate": "2026-10-19",
+  "acceptanceScope": "fix-editor-typography: task/list first-line alignment and H1-H6 scale",
+  "acceptanceFeedback": "可以，验收通过了，结项吧，然后推送到github"
 }

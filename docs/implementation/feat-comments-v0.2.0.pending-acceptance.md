@@ -5,7 +5,7 @@
 - 状态：开发自测完成，待产品验收。
 - 建档日期：2026-10-17。
 - 目标版本：0.2.0；候选构建：0.2.0-rc.1；最终交付版本：待产品验收后确定。
-- 相关提交：未提交；工作区基线 01c54cc。候选构建以 app.asar SHA-256 绑定：`2dcf645dc7fb2a22d5e532cb35d2355c363d9f6a59a6f415ef8d10496054106a`。
+- 相关提交：[1bdb519](https://github.com/whitemoker/moye/commit/1bdb519ecc264049bb583e55132d47943fa0acab)（实现与测试）；工作区原始基线 01c54cc。候选构建以 app.asar SHA-256 绑定：`2dcf645dc7fb2a22d5e532cb35d2355c363d9f6a59a6f415ef8d10496054106a`。
 - 设计：[右侧评论方案](../design/feat-comments-v0.2.0.md)。产品认可方案及开工不等于功能验收。
 - 2026-10-19：后续候选 `0.2.0-rc.2` 包含[格式切换修复](fix-format-toggle-v0.2.0.pending-acceptance.md)，评论 9 组回归通过；产品验收仍待确认。该构建指纹和回归索引见格式切换记录，原 rc.1 交付证据保留。
 

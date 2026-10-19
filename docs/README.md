@@ -41,4 +41,4 @@
 - [代码块对比度](implementation/fix-code-block-contrast-v0.1.5.md)：`0.1.5` 产品已验收，正式归档。
 - [右侧评论](implementation/feat-comments-v0.2.0.pending-acceptance.md)：设计已获产品认可，目标暂定 `0.2.0`；候选 `0.2.0-rc.1` 自测完成，待产品验收；默认宽度 300px。
 - [标题与格式切换](implementation/fix-format-toggle-v0.2.0.pending-acceptance.md)：目标 `0.2.0`；原候选 `0.2.0-rc.2`，已在整合候选 `0.2.0-rc.3` 回归通过，待产品验收。
-- [清单对齐与标题层级](implementation/fix-editor-typography-v0.2.0.pending-acceptance.md)：目标 `0.2.0`；根据产品反馈修复任务框偏高、调整 H1–H6，候选 `0.2.0-rc.3` 自测通过，待产品验收。
+- [清单对齐与标题层级](implementation/fix-editor-typography-v0.2.0.md)：目标 `0.2.0`；交付 `0.2.0-rc.3`，2026-10-19 产品验收通过，已结项归档；整版正式发布另行确认。
