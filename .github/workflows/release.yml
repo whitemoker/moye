@@ -36,10 +36,11 @@ jobs:
       - name: Check version tag
         run: |
           $taskVersion = (Get-Content package.json -Raw | ConvertFrom-Json).version
-          if ($env:GITHUB_REF_NAME -notmatch '^v\d+\.\d+\.\d+$' -or $env:GITHUB_REF_NAME -cne "v$taskVersion") {
+          if ($env:GITHUB_REF_NAME -notmatch '^v\d+\.\d+\.\d+(?:-(?:alpha|beta|rc)\.\d+)?$' -or $env:GITHUB_REF_NAME -cne "v$taskVersion") {
             throw "Release tag must match package.json version: v$taskVersion"
           }
           "MOYE_VERSION=$taskVersion" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "MOYE_PRERELEASE=$($taskVersion.Contains('-').ToString().ToLowerInvariant())" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
 
       - name: Install dependencies
         run: npm ci
@@ -99,4 +100,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh release create "$env:GITHUB_REF_NAME" "release/Moye-$env:MOYE_VERSION-Windows-x64.zip" 'release/SHA256SUMS.txt' --verify-tag --title "墨页 $env:MOYE_VERSION" --notes-file 'release/RELEASE-NOTES.md'
+          $taskArguments = @('release', 'create', $env:GITHUB_REF_NAME, "release/Moye-$env:MOYE_VERSION-Windows-x64.zip", 'release/SHA256SUMS.txt', '--verify-tag', '--title', "墨页 $env:MOYE_VERSION", '--notes-file', 'release/RELEASE-NOTES.md')
+          if ($env:MOYE_PRERELEASE -eq 'true') { $taskArguments += '--prerelease' }
+          gh @taskArguments
