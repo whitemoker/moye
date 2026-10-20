@@ -2,6 +2,8 @@
 
 一个面向 Windows 的本地 Markdown 编辑器，支持边写边预览、源码编辑和 PDF / HTML 导出。文稿使用普通 Markdown 文件保存，适合记笔记、写文档和日常办公。
 
+[下载与启动](#下载与启动) · [使用说明](#第一次使用) · [开发者与 AI 入口](docs/development/README.md)
+
 ## 下载与启动
 
 **[前往 Releases 下载 Windows 版](https://github.com/whitemoker/moye/releases)**
@@ -60,37 +62,9 @@
 - 公司文档加密或终端管控可能限制应用读取文件；需要由公司 IT 按规定授权，墨页不会绕过这些策略。
 - 便携版的“免安装”指程序本身无需安装。设置和恢复草稿仍保存在当前用户的应用数据目录中，不随软件文件夹迁移。
 
-## 从源码运行
+## 参与开发
 
-开发环境：Windows x64、Git、Node.js 22.12 或更高版本（建议使用 Node.js 22 LTS）。首次安装依赖需要联网。
-
-```sh
-git clone https://github.com/whitemoker/moye.git
-cd moye
-npm ci
-npm test
-npm run build
-npm start
-```
-
-开发调试时，先在一个终端运行 `npm run dev`；再在另一个 PowerShell 终端设置开发服务器地址（以 Vite 实际输出为准）并启动：
-
-```powershell
-$env:MOYE_DEV_URL = 'http://localhost:5173'
-npm start
-```
-
-构建 Windows 便携版：
-
-```sh
-npm run package
-```
-
-打包结果默认位于 `release/Moye-win32-x64/`，入口为 `Moye.exe`。通过 `MOYE_OUTPUT_DIR` 环境变量可以指定输出目录。打包时会生成并附带本项目许可证和第三方许可说明。
-
-推送与 package.json 版本一致的 `v版本号` 标签，会触发 GitHub Actions 自动测试、构建并发布 ZIP 和 SHA-256 校验文件。已发布的版本标签不应覆盖。
-
-主要技术：Electron、React、TypeScript、Vite、Milkdown / Crepe 和 CodeMirror。
+想了解墨页的设计方式、与 AI 协作的流程，或从源码运行和修改项目，请从 **[开发者与 AI 入口](docs/development/README.md)** 开始。
 
 ## 许可证
 
